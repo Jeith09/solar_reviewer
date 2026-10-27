@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcards - Solar System Reviewer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Solar System Reviewer</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="flashcards.html">Flashcards</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <p id="card-count"></p>
+    <!-- Click the card to flip it -->
+    <div id="card" class="card flashcard">
+      <div class="front" id="card-front"></div>
+      <div class="back" id="card-back"></div>
+    </div>
+    <div style="text-align:center">
+      <button id="prev-btn" class="btn">Previous</button>
+      <button id="flip-btn" class="btn">Flip</button>
+      <button id="next-btn" class="btn">Next</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">Made for Grade 6 Science</footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/flashcards.js"></script>
+</body>
+</html>

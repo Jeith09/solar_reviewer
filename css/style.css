@@ -1,0 +1,121 @@
+/* css/style.css - shared styles for every page */
+
+/* Design colors (change here, whole site updates) */
+:root {
+  --main-color: #1F2228;
+  --accent-color: #2F7FED;
+  --light-bg: #F3F4F6;
+  --correct-color: #34C38F;
+  --wrong-color: #E5534B;
+}
+
+/* Basic page setup */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--main-color);
+  background: var(--light-bg);
+  line-height: 1.5;
+}
+h1, h2, h3 { margin-top: 0; }
+
+/* Header and navigation */
+.site-header {
+  background: var(--main-color);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+}
+.site-header h1 { margin: 0 0 8px; font-size: 1.6rem; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.nav a:hover { background: var(--accent-color); }
+
+/* Main content area */
+.container {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* White box used for content */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main button */
+.btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 4px;
+}
+.btn:hover { opacity: 0.85; }
+
+/* Answer option buttons in the quiz */
+.btn-choice {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--light-bg);
+  border: 2px solid #D5D9E0;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-choice:hover { border-color: var(--accent-color); }
+
+/* Feedback colors */
+.correct { background: var(--correct-color) !important; color: white !important; }
+.wrong { background: var(--wrong-color) !important; color: white !important; }
+p.correct, p.wrong { padding: 8px; border-radius: 6px; }
+
+/* Hide anything with this class */
+.hidden { display: none !important; }
+
+/* Flashcards: front shows first, back is hidden */
+.flashcard {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.flashcard .back { display: none; font-size: 1.1rem; }
+.flashcard.flipped { background: var(--accent-color); color: white; }
+.flashcard.flipped .front { display: none; }
+.flashcard.flipped .back { display: block; }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  color: #5B6270;
+  font-size: 0.9rem;
+}
+
+/* Phones */
+@media (max-width: 500px) {
+  .site-header h1 { font-size: 1.3rem; }
+  .nav a { margin: 0 4px; }
+}

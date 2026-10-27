@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Solar System Reviewer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Solar System Reviewer</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="flashcards.html">Flashcards</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <!-- Question area -->
+      <div id="quiz-box">
+        <p id="progress"></p>
+        <h2 id="question-text"></h2>
+        <div id="choices"></div>
+        <p id="feedback"></p>
+        <button id="next-btn" class="btn hidden">Next</button>
+      </div>
+      <!-- Final score -->
+      <div id="score-box" class="hidden">
+        <p id="score-text"></p>
+        <button id="restart-btn" class="btn">Try Again</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">Made for Grade 6 Science</footer>
+
+  <!-- data.js must load first -->
+  <script src="js/data.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
